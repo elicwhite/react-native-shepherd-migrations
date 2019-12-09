@@ -1,0 +1,11 @@
+# shepherd.yml
+id: 2019.12.08-nativemethodsmixin-js
+title: Migrate NativeMethodsMixin and NativeComponent to forwardRef
+adapter:
+  type: github
+  search_query: tvos language:JavaScript org:react-native-community
+hooks:
+  should_migrate:
+    - grep -r "NativeMethodsMixin\|\bNativeComponent\b" . # Check that this repo use NativeMethodsMixin or NativeComponent
+  pr_message:
+    - node $SHEPHERD_MIGRATION_DIR/src/generate-message.js

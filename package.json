@@ -1,0 +1,16 @@
+{
+  "name": "react-native-shepherd-migrations",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "scripts": {
+    "format": "prettier migrations/**/*.js --write"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.7.5",
+    "@babel/traverse": "^7.7.4"
+  }
+}
